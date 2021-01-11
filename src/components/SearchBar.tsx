@@ -4,10 +4,10 @@ export default function SearchBar(props:any) {
       <input 
       type="text" 
       placeholder="Search for a country..."
-      onChange={e => props.onChange(e.target.value)
-      }/>
+      onChange={e => props.handleInput(e.target.value)}
+      name="inputText"/>
 
-      <select name="region" id="region-selector">
+      <select name="region" id="region-selector" onChange={(e) => props.handleSelect(e.target.value)}>
         <option value="All">All</option>
         <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>

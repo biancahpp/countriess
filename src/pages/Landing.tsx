@@ -9,19 +9,29 @@ export default function Landing({originalDetails}:any) {
 
   useEffect(() => setCurrentFilter(originalDetails), [originalDetails])
 
-  console.log(currentFilter);
+  console.log(currentFilter)
 
   function filterCountryName(filter:string) {
     setCurrentFilter(originalDetails.filter((obj:any) => obj.name.toLowerCase().includes(filter)))
+  }
+
+  function filterCountryRegion(region:string) {
+    region === "All" ? setCurrentFilter(originalDetails) :
+    setCurrentFilter(originalDetails.filter((obj:any) => obj.region === region))
   }
   
   return (
     <div className="Landing">
       <Header />
-      <SearchBar onChange={(value:string) => {
-      filterCountryName(value)
-      }}/>
-      <CountryList filteredDetails={currentFilter} />
+      <SearchBar 
+        handleInput={(value:string) => {
+          filterCountryName(value)
+        }}
+        handleSelect={(value:string) => {
+          filterCountryRegion(value)
+        }}
+      />
+      <CountryList filteredDetails={originalDetails} />
     </div>
   )
 }
