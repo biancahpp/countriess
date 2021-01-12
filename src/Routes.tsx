@@ -20,7 +20,7 @@ export default function Routes() {
           <Route path="/" exact> 
             <Landing originalDetails={details}/>
           </Route >
-          <Route path="/country-info/:name"> 
+          <Route path="/:alpha3Code"> 
             <CountryInfo originalDetails={details}/>
           </Route>
         </Switch>

@@ -7,7 +7,7 @@ export default function CountryList({filteredDetails}:any) {
       <div className="dashboard">
         {filteredDetails ? filteredDetails.map((item:any) => 
         <div className="card-wrapper" key={uuidv4()}>
-          <Link to={`/country-info/${item.name}`}>
+          <Link to={`/${item.alpha3Code}`}>
             <div className="country-card">
               <div className="flag-wrapper">
                 <img src={item.flag}></img>
