@@ -9,8 +9,6 @@ export default function Landing({originalDetails}:any) {
 
   useEffect(() => setCurrentFilter(originalDetails), [originalDetails])
 
-  console.log(currentFilter)
-
   function filterCountryName(filter:string) {
     setCurrentFilter(originalDetails.filter((obj:any) => obj.name.toLowerCase().includes(filter)))
   }
@@ -31,7 +29,7 @@ export default function Landing({originalDetails}:any) {
           filterCountryRegion(value)
         }}
       />
-      <CountryList filteredDetails={originalDetails} />
+      <CountryList filteredDetails={currentFilter} />
     </div>
   )
 }
