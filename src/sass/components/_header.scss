@@ -3,6 +3,18 @@
   height: 8vh;
   justify-content: space-between;
   align-items: center;
-  
+
+  padding: 2rem;
+
   box-shadow: 0 1rem 2rem rgba($shadow, .10);
+  background-color: var(--component-color);
+  
+  a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    span{
+      padding-left: 1rem;
+    }
+  }
 }

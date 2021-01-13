@@ -1,3 +1,5 @@
+import { FiSearch } from 'react-icons/fi';
+
 export default function SearchBar(props:any) {
   return (
     <div className="SearchBar">
@@ -6,6 +8,8 @@ export default function SearchBar(props:any) {
       placeholder="Search for a country..."
       onChange={e => props.handleInput(e.target.value)}
       name="inputText"/>
+
+      <FiSearch className="search-icon"/>
 
       <select name="region" id="region-selector" onChange={(e) => props.handleSelect(e.target.value)}>
         <option value="All">All</option>

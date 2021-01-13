@@ -1,5 +1,19 @@
-$font-color: #333;
+:root{
 
-$background: #f1f1f1;
+  --font-light: #333;
+  --font-dark: #fff;
+
+  --background-light: #f1f1f1;
+  --background-dark: hsl(207, 26%, 17%);
+
+  --component-light: #fff;
+  --component-dark: hsl(209, 23%, 22%);
+
+  --font-color: var(--font-light);
+  --background: var(--background-light);
+  --component-color: var(--component-light);
+}
 
 $shadow: black;
+
+$icon-color: 	#D0D0D0;

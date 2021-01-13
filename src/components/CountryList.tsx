@@ -3,29 +3,30 @@ import { Link } from "react-router-dom";
 
 export default function CountryList({filteredDetails}:any) {
   return (
-    <div>
+    <div className="CountryList">
       <div className="dashboard">
         {filteredDetails ? filteredDetails.map((item:any) => 
         <div className="card-wrapper" key={uuidv4()}>
-          <Link to={`/${item.alpha3Code}`}>
+          <Link to={`/${item.alpha3Code}`} className="country-link">
             <div className="country-card">
               <div className="flag-wrapper">
                 <img src={item.flag}></img>
               </div>
               <div className="text-wrapper">
                 <h1>{item.name}</h1>
-                <span>
+                <div className="country-info-wrapper">
                   <h4>Population:</h4> 
-                  {item.population}
-                </span>
-                <span>
+                  <span>{item.population.toLocaleString('de-DE')}</span>
+                </div>
+                <div className="country-info-wrapper">
                   <h4>Region:</h4> 
-                  {item.region}
-                </span>
-                <span>
-                  <h4>Capital:</h4> 
-                  {item.capital}
-                </span>
+                  <span>{item.region}</span>
+                </div>
+                <div
+                className="country-info-wrapper">
+                  <h4>Capital:</h4>
+                  <span>{item.capital}</span>
+                </div>
               </div>
             </div> 
           </Link>
