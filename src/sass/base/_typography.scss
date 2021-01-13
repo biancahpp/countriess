@@ -35,3 +35,22 @@
   }
 }
 
+.CountryInfo{
+  font-weight: 700;
+  .info-wrapper{
+    .country-data{
+      font-size: 1.5rem;
+      line-height: 2;
+      span{
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.BackBtn{
+  .back-btn-icon{
+    color: var(--font-color);
+  }
+}
+

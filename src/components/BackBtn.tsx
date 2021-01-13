@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 
 export default function BackBtn() {
   return (
     <div className="BackBtn">
       <Link to="/">
-      <button> BACK </button>
+       <FiArrowLeft className="back-btn-icon"/>
       </Link>
     </div>
   )

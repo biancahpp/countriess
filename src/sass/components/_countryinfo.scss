@@ -1,0 +1,57 @@
+.CountryInfo{
+  min-height: 100vh;
+  width: 100vw;
+
+  .BackBtn{
+    padding: 2rem;
+    .back-btn-icon{
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+  .info-wrapper{
+    width: 100%;
+    padding: 2rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .country-data{
+      
+      p{
+        display: inline-block;
+        padding-left: .5rem;
+        
+        &:not(:last-child){
+          &:after{
+            content: ",";
+          }
+        }
+      }
+      h3{
+        padding-top: 1rem;
+      }
+      .border-link-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        .border-btn{
+          text-decoration: none;
+          color: var(--font-color);
+          background-color: var(--component-color);
+          width: 15%;
+        
+          padding: .2rem 1rem;
+        
+          border-radius: .5rem;
+          margin: 1rem 2rem 0 0;
+
+          box-shadow: 0 1rem 2rem rgba($shadow, .10);
+        }
+      }
+      
+    }
+  }
+}
+
