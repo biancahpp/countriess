@@ -32,11 +32,13 @@ export default function CountryInfo({ originalDetails }: any) {
       <BackBtn />
       {details && details[0] ? (
         <div className="info-wrapper">
-          <div>
+          <div className="img-wrapper">
             <img src={details[0].flag} alt="Flag" />
           </div>
           <div className="country-data">
             <h1>{details[0].name}</h1>
+            <div className="country-data-wrapper">
+              <div>
             <div>
               Native Name: <span>{details[0].nativeName}</span>
             </div>
@@ -52,6 +54,8 @@ export default function CountryInfo({ originalDetails }: any) {
             <div>
               Capital: <span>{details[0].capital}</span>
             </div>
+            </div>
+            <div>
             <div>
               Top Level Domain: <span>{details[0].topLevelDomain}</span>
             </div>
@@ -71,12 +75,14 @@ export default function CountryInfo({ originalDetails }: any) {
                 ))}
               </span>
             </div>
+            </div>
+            </div>
+            
             <div>
               <h3>Border Countries:</h3>{" "}
               <div className="border-link-wrapper" >
               {details[0].borders.length ? (
                 details[0].borders.map((el: any) => (
-                  
                     <Link
                     to={`/${el}`}
                     onClick={() => filterBorder(el)}
@@ -85,8 +91,6 @@ export default function CountryInfo({ originalDetails }: any) {
                   >
                     {el}
                   </Link>
-                  
-                  
                 ))
               ) : (
                 <p>None</p>

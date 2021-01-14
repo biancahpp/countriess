@@ -23,7 +23,7 @@ export default function Landing({originalDetails}:any) {
       <Header />
       <SearchBar 
         handleInput={(value:string) => {
-          filterCountryName(value)
+          filterCountryName(value.toLowerCase())
         }}
         handleSelect={(value:string) => {
           filterCountryRegion(value)

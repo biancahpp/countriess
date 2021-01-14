@@ -54,3 +54,87 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+  .Header{
+    h1{
+      font-size: 2.5rem;
+    }
+    a{
+      font-size: 2.5rem;
+      span{
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  .SearchBar{
+    input{
+      &::placeholder{
+        font-size: 2rem;
+      }
+    }
+    select{
+      font-size: 2rem;
+    }
+  }
+  
+  .CountryList{
+    .text-wrapper{
+      font-size: 2rem;
+      h1{
+        font-size: 3.3rem;
+      }
+    }
+  }
+  
+  .CountryInfo{
+    .info-wrapper{
+      .country-data{
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .Header{
+    h1{
+      font-size: 3rem;
+    }
+    a{
+      font-size: 3rem;
+      span{
+        font-size: 2.5rem;
+      }
+    }
+  }
+  
+  .SearchBar{
+    input{
+      font-size: 2rem;
+      &::placeholder{
+        font-size: 2rem;
+      }
+    }
+    select{
+      font-size: 2rem;
+    }
+  }
+  
+  .CountryList{
+    .text-wrapper{
+      font-size: 2rem;
+      h1{
+        font-size: 2.6rem;
+      }
+    }
+  }
+  
+  .CountryInfo{
+    .info-wrapper{
+      .country-data{
+        font-size: 2rem;
+      }
+    }
+  }
+}

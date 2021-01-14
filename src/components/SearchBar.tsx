@@ -12,7 +12,7 @@ export default function SearchBar(props:any) {
       <FiSearch className="search-icon"/>
 
       <select name="region" id="region-selector" onChange={(e) => props.handleSelect(e.target.value)}>
-        <option value="All">All</option>
+        <option value="All">All Regions</option>
         <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>
