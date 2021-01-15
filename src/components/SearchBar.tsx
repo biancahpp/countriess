@@ -1,6 +1,11 @@
 import { FiSearch } from 'react-icons/fi';
 
-export default function SearchBar(props:any) {
+interface Props {
+  handleInput: (value: string) => void;
+  handleSelect: (value: string) => void;
+}
+
+export default function SearchBar(props:Props) {
   return (
     <div className="SearchBar">
       <input 
